@@ -2,6 +2,1383 @@
  "version": 1,
  "lessons": [
   {
+   "id": "basis-lesen-fragewoerter",
+   "name": "Basis – Lesen: Fragewörter",
+   "words": [
+    {
+     "id": "basis-lesen-fragewoerter--who",
+     "en": "who",
+     "de": "wer",
+     "sEn": "Who is your teacher?",
+     "sDe": "Wer ist deine Lehrerin?"
+    },
+    {
+     "id": "basis-lesen-fragewoerter--what",
+     "en": "what",
+     "de": "was",
+     "sEn": "What is your favourite colour?",
+     "sDe": "Was ist deine Lieblingsfarbe?"
+    },
+    {
+     "id": "basis-lesen-fragewoerter--where",
+     "en": "where",
+     "de": "wo, wohin",
+     "sEn": "Where is my bag?",
+     "sDe": "Wo ist meine Tasche?"
+    },
+    {
+     "id": "basis-lesen-fragewoerter--when",
+     "en": "when",
+     "de": "wann",
+     "sEn": "When is your birthday?",
+     "sDe": "Wann hast du Geburtstag?"
+    },
+    {
+     "id": "basis-lesen-fragewoerter--why",
+     "en": "why",
+     "de": "warum",
+     "sEn": "Why are you sad?",
+     "sDe": "Warum bist du traurig?"
+    },
+    {
+     "id": "basis-lesen-fragewoerter--how",
+     "en": "how",
+     "de": "wie",
+     "sEn": "How do you spell your name?",
+     "sDe": "Wie buchstabiert man deinen Namen?"
+    },
+    {
+     "id": "basis-lesen-fragewoerter--whose",
+     "en": "whose",
+     "de": "wessen, wem gehört",
+     "sEn": "Whose pencil case is this?",
+     "sDe": "Wem gehört dieses Federmäppchen?"
+    },
+    {
+     "id": "basis-lesen-fragewoerter--which",
+     "en": "which",
+     "de": "welche(r, s) (Auswahl)",
+     "sEn": "Which cake do you want?",
+     "sDe": "Welchen Kuchen möchtest du?"
+    },
+    {
+     "id": "basis-lesen-fragewoerter--how-much",
+     "en": "how much",
+     "de": "wie viel (nicht zählbar)",
+     "sEn": "How much is the ice cream?",
+     "sDe": "Wie viel kostet das Eis?"
+    },
+    {
+     "id": "basis-lesen-fragewoerter--how-many",
+     "en": "how many",
+     "de": "wie viele (zählbar)",
+     "sEn": "How many pets have you got?",
+     "sDe": "Wie viele Haustiere hast du?"
+    },
+    {
+     "id": "basis-lesen-fragewoerter--how-old",
+     "en": "how old",
+     "de": "wie alt",
+     "sEn": "How old is your brother?",
+     "sDe": "Wie alt ist dein Bruder?"
+    },
+    {
+     "id": "basis-lesen-fragewoerter--what-time",
+     "en": "what time",
+     "de": "um wie viel Uhr, wie spät",
+     "sEn": "What time is it?",
+     "sDe": "Wie spät ist es?"
+    }
+   ]
+  },
+  {
+   "id": "basis-lesen-praepositionen",
+   "name": "Basis – Lesen: Präpositionen",
+   "words": [
+    {
+     "id": "basis-lesen-praepositionen--at",
+     "en": "at",
+     "de": "um (bei Uhrzeiten)",
+     "sEn": "School starts at eight o'clock.",
+     "sDe": "Die Schule fängt um acht Uhr an."
+    },
+    {
+     "id": "basis-lesen-praepositionen--on",
+     "en": "on",
+     "de": "am (bei Tagen)",
+     "sEn": "We have English on Tuesday.",
+     "sDe": "Wir haben am Dienstag Englisch."
+    },
+    {
+     "id": "basis-lesen-praepositionen--in",
+     "en": "in",
+     "de": "im (bei Monaten und Jahreszeiten)",
+     "sEn": "It often snows in winter.",
+     "sDe": "Im Winter schneit es oft."
+    },
+    {
+     "id": "basis-lesen-praepositionen--at-home",
+     "en": "at home",
+     "de": "zu Hause",
+     "sEn": "My dog is at home.",
+     "sDe": "Mein Hund ist zu Hause."
+    },
+    {
+     "id": "basis-lesen-praepositionen--at-school",
+     "en": "at school",
+     "de": "in der Schule",
+     "sEn": "We eat lunch at school.",
+     "sDe": "Wir essen in der Schule zu Mittag."
+    },
+    {
+     "id": "basis-lesen-praepositionen--at-the-weekend",
+     "en": "at the weekend",
+     "de": "am Wochenende",
+     "sEn": "I play football at the weekend.",
+     "sDe": "Am Wochenende spiele ich Fußball."
+    },
+    {
+     "id": "basis-lesen-praepositionen--in-the-morning",
+     "en": "in the morning",
+     "de": "morgens, am Morgen",
+     "sEn": "I have breakfast in the morning.",
+     "sDe": "Morgens frühstücke ich."
+    },
+    {
+     "id": "basis-lesen-praepositionen--in-the-afternoon",
+     "en": "in the afternoon",
+     "de": "nachmittags",
+     "sEn": "We go swimming in the afternoon.",
+     "sDe": "Nachmittags gehen wir schwimmen."
+    },
+    {
+     "id": "basis-lesen-praepositionen--under",
+     "en": "under",
+     "de": "unter",
+     "sEn": "My shoes are under the bed.",
+     "sDe": "Meine Schuhe sind unter dem Bett."
+    },
+    {
+     "id": "basis-lesen-praepositionen--on-the-table",
+     "en": "on the table",
+     "de": "auf dem Tisch",
+     "sEn": "Your book is on the table.",
+     "sDe": "Dein Buch liegt auf dem Tisch."
+    },
+    {
+     "id": "basis-lesen-praepositionen--next-to",
+     "en": "next to",
+     "de": "neben",
+     "sEn": "I sit next to Lena.",
+     "sDe": "Ich sitze neben Lena."
+    },
+    {
+     "id": "basis-lesen-praepositionen--behind",
+     "en": "behind",
+     "de": "hinter",
+     "sEn": "The cat is behind the door.",
+     "sDe": "Die Katze ist hinter der Tür."
+    },
+    {
+     "id": "basis-lesen-praepositionen--in-front-of",
+     "en": "in front of",
+     "de": "vor (Ort)",
+     "sEn": "Our car is in front of the house.",
+     "sDe": "Unser Auto steht vor dem Haus."
+    },
+    {
+     "id": "basis-lesen-praepositionen--between",
+     "en": "between",
+     "de": "zwischen",
+     "sEn": "The shop is between the bank and the café.",
+     "sDe": "Der Laden ist zwischen der Bank und dem Café."
+    },
+    {
+     "id": "basis-lesen-praepositionen--opposite",
+     "en": "opposite",
+     "de": "gegenüber",
+     "sEn": "The bus stop is opposite our school.",
+     "sDe": "Die Bushaltestelle ist gegenüber von unserer Schule."
+    },
+    {
+     "id": "basis-lesen-praepositionen--into",
+     "en": "into",
+     "de": "in … hinein",
+     "sEn": "The dog jumped into the water.",
+     "sDe": "Der Hund ist ins Wasser gesprungen."
+    },
+    {
+     "id": "basis-lesen-praepositionen--before",
+     "en": "before",
+     "de": "vor (zeitlich)",
+     "sEn": "I do my homework before dinner.",
+     "sDe": "Ich mache meine Hausaufgaben vor dem Abendessen."
+    },
+    {
+     "id": "basis-lesen-praepositionen--after",
+     "en": "after",
+     "de": "nach (zeitlich)",
+     "sEn": "After school I go home.",
+     "sDe": "Nach der Schule gehe ich nach Hause."
+    },
+    {
+     "id": "basis-lesen-praepositionen--with",
+     "en": "with",
+     "de": "mit",
+     "sEn": "I go to school with my friend.",
+     "sDe": "Ich gehe mit meiner Freundin zur Schule."
+    },
+    {
+     "id": "basis-lesen-praepositionen--without",
+     "en": "without",
+     "de": "ohne",
+     "sEn": "I can't sleep without my teddy.",
+     "sDe": "Ich kann ohne meinen Teddy nicht schlafen."
+    },
+    {
+     "id": "basis-lesen-praepositionen--about",
+     "en": "about",
+     "de": "über (ein Thema)",
+     "sEn": "The story is about a little dragon.",
+     "sDe": "Die Geschichte handelt von einem kleinen Drachen."
+    }
+   ]
+  },
+  {
+   "id": "basis-lesen-mengen-und-verneinung",
+   "name": "Basis – Lesen: Mengen und Verneinung",
+   "words": [
+    {
+     "id": "basis-lesen-mengen-und-verneinung--some",
+     "en": "some",
+     "de": "etwas, einige (in bejahten Sätzen)",
+     "sEn": "I'd like some apples, please.",
+     "sDe": "Ich hätte gern ein paar Äpfel, bitte."
+    },
+    {
+     "id": "basis-lesen-mengen-und-verneinung--any",
+     "en": "any",
+     "de": "(irgend)welche (in Fragen und Verneinungen)",
+     "sEn": "Have you got any sisters?",
+     "sDe": "Hast du Schwestern?"
+    },
+    {
+     "id": "basis-lesen-mengen-und-verneinung--much",
+     "en": "much",
+     "de": "viel (nicht zählbar)",
+     "sEn": "I don't drink much milk.",
+     "sDe": "Ich trinke nicht viel Milch."
+    },
+    {
+     "id": "basis-lesen-mengen-und-verneinung--many",
+     "en": "many",
+     "de": "viele (zählbar)",
+     "sEn": "There are many children in the park.",
+     "sDe": "Im Park sind viele Kinder."
+    },
+    {
+     "id": "basis-lesen-mengen-und-verneinung--a-lot-of",
+     "en": "a lot of",
+     "de": "viel, viele",
+     "sEn": "I've got a lot of books.",
+     "sDe": "Ich habe viele Bücher."
+    },
+    {
+     "id": "basis-lesen-mengen-und-verneinung--a-few",
+     "en": "a few",
+     "de": "ein paar (zählbar)",
+     "sEn": "I've got a few stickers for you.",
+     "sDe": "Ich habe ein paar Sticker für dich."
+    },
+    {
+     "id": "basis-lesen-mengen-und-verneinung--a-little",
+     "en": "a little",
+     "de": "ein bisschen (nicht zählbar)",
+     "sEn": "Can I have a little water?",
+     "sDe": "Kann ich ein bisschen Wasser haben?"
+    },
+    {
+     "id": "basis-lesen-mengen-und-verneinung--every",
+     "en": "every",
+     "de": "jede(r, s)",
+     "sEn": "I read every evening.",
+     "sDe": "Ich lese jeden Abend."
+    },
+    {
+     "id": "basis-lesen-mengen-und-verneinung--all",
+     "en": "all",
+     "de": "alle",
+     "sEn": "All my friends were at the party.",
+     "sDe": "Alle meine Freunde waren auf der Party."
+    },
+    {
+     "id": "basis-lesen-mengen-und-verneinung--both",
+     "en": "both",
+     "de": "beide",
+     "sEn": "Both my grandmas live in Hamburg.",
+     "sDe": "Meine beiden Omas wohnen in Hamburg."
+    },
+    {
+     "id": "basis-lesen-mengen-und-verneinung--something",
+     "en": "something",
+     "de": "etwas",
+     "sEn": "I've got something for you.",
+     "sDe": "Ich habe etwas für dich."
+    },
+    {
+     "id": "basis-lesen-mengen-und-verneinung--nothing",
+     "en": "nothing",
+     "de": "nichts",
+     "sEn": "There is nothing on TV.",
+     "sDe": "Im Fernsehen kommt nichts."
+    },
+    {
+     "id": "basis-lesen-mengen-und-verneinung--somebody",
+     "en": "somebody",
+     "de": "jemand",
+     "sEn": "Somebody took my pen.",
+     "sDe": "Jemand hat meinen Stift genommen."
+    },
+    {
+     "id": "basis-lesen-mengen-und-verneinung--nobody",
+     "en": "nobody",
+     "de": "niemand",
+     "sEn": "Nobody was at home.",
+     "sDe": "Niemand war zu Hause."
+    },
+    {
+     "id": "basis-lesen-mengen-und-verneinung--everybody",
+     "en": "everybody",
+     "de": "jeder, alle",
+     "sEn": "Everybody in my class has got a bike.",
+     "sDe": "Jeder in meiner Klasse hat ein Fahrrad."
+    },
+    {
+     "id": "basis-lesen-mengen-und-verneinung--everything",
+     "en": "everything",
+     "de": "alles",
+     "sEn": "I like everything about summer.",
+     "sDe": "Ich mag alles am Sommer."
+    }
+   ]
+  },
+  {
+   "id": "basis-lesen-signalwoerter",
+   "name": "Basis – Lesen: Signalwörter",
+   "words": [
+    {
+     "id": "basis-lesen-signalwoerter--always",
+     "en": "always",
+     "de": "immer",
+     "sEn": "I always walk to school.",
+     "sDe": "Ich gehe immer zu Fuß zur Schule."
+    },
+    {
+     "id": "basis-lesen-signalwoerter--usually",
+     "en": "usually",
+     "de": "normalerweise, meistens",
+     "sEn": "I usually go to bed at nine.",
+     "sDe": "Ich gehe normalerweise um neun ins Bett."
+    },
+    {
+     "id": "basis-lesen-signalwoerter--often",
+     "en": "often",
+     "de": "oft",
+     "sEn": "We often play cards.",
+     "sDe": "Wir spielen oft Karten."
+    },
+    {
+     "id": "basis-lesen-signalwoerter--sometimes",
+     "en": "sometimes",
+     "de": "manchmal",
+     "sEn": "Sometimes I'm late for school.",
+     "sDe": "Manchmal komme ich zu spät zur Schule."
+    },
+    {
+     "id": "basis-lesen-signalwoerter--never",
+     "en": "never",
+     "de": "nie",
+     "sEn": "My cat never drinks milk.",
+     "sDe": "Meine Katze trinkt nie Milch."
+    },
+    {
+     "id": "basis-lesen-signalwoerter--every-day",
+     "en": "every day",
+     "de": "jeden Tag",
+     "sEn": "I feed my rabbit every day.",
+     "sDe": "Ich füttere jeden Tag mein Kaninchen."
+    },
+    {
+     "id": "basis-lesen-signalwoerter--now",
+     "en": "now",
+     "de": "jetzt",
+     "sEn": "I'm hungry now.",
+     "sDe": "Ich habe jetzt Hunger."
+    },
+    {
+     "id": "basis-lesen-signalwoerter--at-the-moment",
+     "en": "at the moment",
+     "de": "im Moment, gerade",
+     "sEn": "At the moment I'm reading a good book.",
+     "sDe": "Im Moment lese ich ein gutes Buch."
+    },
+    {
+     "id": "basis-lesen-signalwoerter--look",
+     "en": "look",
+     "de": "schau mal (Signal für jetzt)",
+     "sEn": "Look, the baby is sleeping!",
+     "sDe": "Schau mal, das Baby schläft!"
+    },
+    {
+     "id": "basis-lesen-signalwoerter--yesterday",
+     "en": "yesterday",
+     "de": "gestern",
+     "sEn": "Yesterday I was at my grandma's house.",
+     "sDe": "Gestern war ich bei meiner Oma."
+    },
+    {
+     "id": "basis-lesen-signalwoerter--last-weekend",
+     "en": "last weekend",
+     "de": "letztes Wochenende",
+     "sEn": "Last weekend we went to the beach.",
+     "sDe": "Letztes Wochenende sind wir an den Strand gefahren."
+    },
+    {
+     "id": "basis-lesen-signalwoerter--last-year",
+     "en": "last year",
+     "de": "letztes Jahr",
+     "sEn": "Last year we were in Italy.",
+     "sDe": "Letztes Jahr waren wir in Italien."
+    },
+    {
+     "id": "basis-lesen-signalwoerter--ago",
+     "en": "ago",
+     "de": "vor (Zeitraum in der Vergangenheit)",
+     "sEn": "We got our dog two years ago.",
+     "sDe": "Wir haben unseren Hund vor zwei Jahren bekommen."
+    },
+    {
+     "id": "basis-lesen-signalwoerter--tomorrow",
+     "en": "tomorrow",
+     "de": "morgen",
+     "sEn": "Tomorrow we have a test.",
+     "sDe": "Morgen schreiben wir einen Test."
+    },
+    {
+     "id": "basis-lesen-signalwoerter--next-week",
+     "en": "next week",
+     "de": "nächste Woche",
+     "sEn": "Next week is my birthday.",
+     "sDe": "Nächste Woche habe ich Geburtstag."
+    },
+    {
+     "id": "basis-lesen-signalwoerter--later",
+     "en": "later",
+     "de": "später",
+     "sEn": "See you later!",
+     "sDe": "Bis später!"
+    }
+   ]
+  },
+  {
+   "id": "basis-lesen-unregelmaessige-verben",
+   "name": "Basis – Lesen: Unregelmäßige Verben",
+   "words": [
+    {
+     "id": "basis-lesen-unregelmaessige-verben--to-be",
+     "en": "to be",
+     "de": "sein",
+     "sEn": "I want to be a teacher.",
+     "sDe": "Ich möchte Lehrerin sein.",
+     "forms": [
+      "be",
+      "was/were",
+      "been"
+     ]
+    },
+    {
+     "id": "basis-lesen-unregelmaessige-verben--to-have",
+     "en": "to have",
+     "de": "haben",
+     "sEn": "We have a big garden.",
+     "sDe": "Wir haben einen großen Garten.",
+     "forms": [
+      "have",
+      "had",
+      "had"
+     ]
+    },
+    {
+     "id": "basis-lesen-unregelmaessige-verben--to-do",
+     "en": "to do",
+     "de": "tun, machen",
+     "sEn": "I do my homework after lunch.",
+     "sDe": "Ich mache meine Hausaufgaben nach dem Mittagessen.",
+     "forms": [
+      "do",
+      "did",
+      "done"
+     ]
+    },
+    {
+     "id": "basis-lesen-unregelmaessige-verben--to-go",
+     "en": "to go",
+     "de": "gehen, fahren",
+     "sEn": "Let's go to the park!",
+     "sDe": "Lass uns in den Park gehen!",
+     "forms": [
+      "go",
+      "went",
+      "gone"
+     ]
+    },
+    {
+     "id": "basis-lesen-unregelmaessige-verben--to-come",
+     "en": "to come",
+     "de": "kommen",
+     "sEn": "Can you come to my party?",
+     "sDe": "Kannst du zu meiner Party kommen?",
+     "forms": [
+      "come",
+      "came",
+      "come"
+     ]
+    },
+    {
+     "id": "basis-lesen-unregelmaessige-verben--to-get",
+     "en": "to get",
+     "de": "bekommen",
+     "sEn": "I get pocket money every week.",
+     "sDe": "Ich bekomme jede Woche Taschengeld.",
+     "forms": [
+      "get",
+      "got",
+      "got"
+     ]
+    },
+    {
+     "id": "basis-lesen-unregelmaessige-verben--to-make",
+     "en": "to make",
+     "de": "machen, herstellen",
+     "sEn": "Let's make a cake!",
+     "sDe": "Lass uns einen Kuchen backen!",
+     "forms": [
+      "make",
+      "made",
+      "made"
+     ]
+    },
+    {
+     "id": "basis-lesen-unregelmaessige-verben--to-take",
+     "en": "to take",
+     "de": "nehmen",
+     "sEn": "Take an apple!",
+     "sDe": "Nimm dir einen Apfel!",
+     "forms": [
+      "take",
+      "took",
+      "taken"
+     ]
+    },
+    {
+     "id": "basis-lesen-unregelmaessige-verben--to-give",
+     "en": "to give",
+     "de": "geben",
+     "sEn": "Can you give me the ball?",
+     "sDe": "Kannst du mir den Ball geben?",
+     "forms": [
+      "give",
+      "gave",
+      "given"
+     ]
+    },
+    {
+     "id": "basis-lesen-unregelmaessige-verben--to-see",
+     "en": "to see",
+     "de": "sehen",
+     "sEn": "I can see a bird in the tree.",
+     "sDe": "Ich kann einen Vogel im Baum sehen.",
+     "forms": [
+      "see",
+      "saw",
+      "seen"
+     ]
+    },
+    {
+     "id": "basis-lesen-unregelmaessige-verben--to-say",
+     "en": "to say",
+     "de": "sagen",
+     "sEn": "Say hello to your mum!",
+     "sDe": "Sag deiner Mutter Hallo!",
+     "forms": [
+      "say",
+      "said",
+      "said"
+     ]
+    },
+    {
+     "id": "basis-lesen-unregelmaessige-verben--to-tell",
+     "en": "to tell",
+     "de": "erzählen",
+     "sEn": "Can you tell me a story?",
+     "sDe": "Kannst du mir eine Geschichte erzählen?",
+     "forms": [
+      "tell",
+      "told",
+      "told"
+     ]
+    },
+    {
+     "id": "basis-lesen-unregelmaessige-verben--to-know",
+     "en": "to know",
+     "de": "wissen, kennen",
+     "sEn": "I know the answer.",
+     "sDe": "Ich weiß die Antwort.",
+     "forms": [
+      "know",
+      "knew",
+      "known"
+     ]
+    },
+    {
+     "id": "basis-lesen-unregelmaessige-verben--to-think",
+     "en": "to think",
+     "de": "denken, glauben",
+     "sEn": "I think it's going to rain.",
+     "sDe": "Ich glaube, es wird regnen.",
+     "forms": [
+      "think",
+      "thought",
+      "thought"
+     ]
+    },
+    {
+     "id": "basis-lesen-unregelmaessige-verben--to-find",
+     "en": "to find",
+     "de": "finden",
+     "sEn": "I can't find my sock.",
+     "sDe": "Ich kann meine Socke nicht finden.",
+     "forms": [
+      "find",
+      "found",
+      "found"
+     ]
+    },
+    {
+     "id": "basis-lesen-unregelmaessige-verben--to-buy",
+     "en": "to buy",
+     "de": "kaufen",
+     "sEn": "I want to buy a present for my mum.",
+     "sDe": "Ich will ein Geschenk für meine Mutter kaufen.",
+     "forms": [
+      "buy",
+      "bought",
+      "bought"
+     ]
+    },
+    {
+     "id": "basis-lesen-unregelmaessige-verben--to-eat",
+     "en": "to eat",
+     "de": "essen",
+     "sEn": "We eat pizza on Fridays.",
+     "sDe": "Freitags essen wir Pizza.",
+     "forms": [
+      "eat",
+      "ate",
+      "eaten"
+     ]
+    },
+    {
+     "id": "basis-lesen-unregelmaessige-verben--to-drink",
+     "en": "to drink",
+     "de": "trinken",
+     "sEn": "I drink orange juice for breakfast.",
+     "sDe": "Zum Frühstück trinke ich Orangensaft.",
+     "forms": [
+      "drink",
+      "drank",
+      "drunk"
+     ]
+    },
+    {
+     "id": "basis-lesen-unregelmaessige-verben--to-run",
+     "en": "to run",
+     "de": "rennen, laufen",
+     "sEn": "I can run very fast.",
+     "sDe": "Ich kann sehr schnell rennen.",
+     "forms": [
+      "run",
+      "ran",
+      "run"
+     ]
+    },
+    {
+     "id": "basis-lesen-unregelmaessige-verben--to-swim",
+     "en": "to swim",
+     "de": "schwimmen",
+     "sEn": "We swim in the lake in summer.",
+     "sDe": "Im Sommer schwimmen wir im See.",
+     "forms": [
+      "swim",
+      "swam",
+      "swum"
+     ]
+    },
+    {
+     "id": "basis-lesen-unregelmaessige-verben--to-write",
+     "en": "to write",
+     "de": "schreiben",
+     "sEn": "Write your name on the paper.",
+     "sDe": "Schreib deinen Namen auf das Blatt.",
+     "forms": [
+      "write",
+      "wrote",
+      "written"
+     ]
+    },
+    {
+     "id": "basis-lesen-unregelmaessige-verben--to-read",
+     "en": "to read",
+     "de": "lesen",
+     "sEn": "I read comics in bed.",
+     "sDe": "Ich lese im Bett Comics.",
+     "forms": [
+      "read",
+      "read",
+      "read"
+     ]
+    },
+    {
+     "id": "basis-lesen-unregelmaessige-verben--to-speak",
+     "en": "to speak",
+     "de": "sprechen",
+     "sEn": "My dad can speak Spanish.",
+     "sDe": "Mein Vater kann Spanisch sprechen.",
+     "forms": [
+      "speak",
+      "spoke",
+      "spoken"
+     ]
+    },
+    {
+     "id": "basis-lesen-unregelmaessige-verben--to-meet",
+     "en": "to meet",
+     "de": "treffen",
+     "sEn": "I meet my friends in the park.",
+     "sDe": "Ich treffe meine Freunde im Park.",
+     "forms": [
+      "meet",
+      "met",
+      "met"
+     ]
+    },
+    {
+     "id": "basis-lesen-unregelmaessige-verben--to-sleep",
+     "en": "to sleep",
+     "de": "schlafen",
+     "sEn": "My cat likes to sleep on my bed.",
+     "sDe": "Meine Katze schläft gern auf meinem Bett.",
+     "forms": [
+      "sleep",
+      "slept",
+      "slept"
+     ]
+    },
+    {
+     "id": "basis-lesen-unregelmaessige-verben--to-sit",
+     "en": "to sit",
+     "de": "sitzen, sich setzen",
+     "sEn": "Please sit down.",
+     "sDe": "Bitte setz dich.",
+     "forms": [
+      "sit",
+      "sat",
+      "sat"
+     ]
+    },
+    {
+     "id": "basis-lesen-unregelmaessige-verben--to-wear",
+     "en": "to wear",
+     "de": "tragen (Kleidung)",
+     "sEn": "I wear jeans every day.",
+     "sDe": "Ich trage jeden Tag Jeans.",
+     "forms": [
+      "wear",
+      "wore",
+      "worn"
+     ]
+    },
+    {
+     "id": "basis-lesen-unregelmaessige-verben--to-win",
+     "en": "to win",
+     "de": "gewinnen",
+     "sEn": "I hope we win the game.",
+     "sDe": "Ich hoffe, wir gewinnen das Spiel.",
+     "forms": [
+      "win",
+      "won",
+      "won"
+     ]
+    },
+    {
+     "id": "basis-lesen-unregelmaessige-verben--to-lose",
+     "en": "to lose",
+     "de": "verlieren",
+     "sEn": "Don't lose your key!",
+     "sDe": "Verlier deinen Schlüssel nicht!",
+     "forms": [
+      "lose",
+      "lost",
+      "lost"
+     ]
+    },
+    {
+     "id": "basis-lesen-unregelmaessige-verben--to-forget",
+     "en": "to forget",
+     "de": "vergessen",
+     "sEn": "Don't forget your PE bag!",
+     "sDe": "Vergiss deinen Sportbeutel nicht!",
+     "forms": [
+      "forget",
+      "forgot",
+      "forgotten"
+     ]
+    },
+    {
+     "id": "basis-lesen-unregelmaessige-verben--to-send",
+     "en": "to send",
+     "de": "schicken",
+     "sEn": "Send me a message!",
+     "sDe": "Schick mir eine Nachricht!",
+     "forms": [
+      "send",
+      "sent",
+      "sent"
+     ]
+    },
+    {
+     "id": "basis-lesen-unregelmaessige-verben--to-sing",
+     "en": "to sing",
+     "de": "singen",
+     "sEn": "We sing a song for grandpa.",
+     "sDe": "Wir singen ein Lied für Opa.",
+     "forms": [
+      "sing",
+      "sang",
+      "sung"
+     ]
+    },
+    {
+     "id": "basis-lesen-unregelmaessige-verben--to-ride",
+     "en": "to ride",
+     "de": "reiten, (Rad) fahren",
+     "sEn": "I ride my bike to school.",
+     "sDe": "Ich fahre mit dem Rad zur Schule.",
+     "forms": [
+      "ride",
+      "rode",
+      "ridden"
+     ]
+    },
+    {
+     "id": "basis-lesen-unregelmaessige-verben--to-fly",
+     "en": "to fly",
+     "de": "fliegen",
+     "sEn": "Birds can fly.",
+     "sDe": "Vögel können fliegen.",
+     "forms": [
+      "fly",
+      "flew",
+      "flown"
+     ]
+    },
+    {
+     "id": "basis-lesen-unregelmaessige-verben--to-fall",
+     "en": "to fall",
+     "de": "fallen",
+     "sEn": "Be careful, don't fall!",
+     "sDe": "Pass auf, fall nicht hin!",
+     "forms": [
+      "fall",
+      "fell",
+      "fallen"
+     ]
+    },
+    {
+     "id": "basis-lesen-unregelmaessige-verben--to-hear",
+     "en": "to hear",
+     "de": "hören",
+     "sEn": "Can you hear the birds?",
+     "sDe": "Kannst du die Vögel hören?",
+     "forms": [
+      "hear",
+      "heard",
+      "heard"
+     ]
+    },
+    {
+     "id": "basis-lesen-unregelmaessige-verben--to-leave",
+     "en": "to leave",
+     "de": "verlassen, abfahren",
+     "sEn": "We leave the house at half past seven.",
+     "sDe": "Wir verlassen das Haus um halb acht.",
+     "forms": [
+      "leave",
+      "left",
+      "left"
+     ]
+    },
+    {
+     "id": "basis-lesen-unregelmaessige-verben--to-feel",
+     "en": "to feel",
+     "de": "(sich) fühlen",
+     "sEn": "I feel happy today.",
+     "sDe": "Ich fühle mich heute glücklich.",
+     "forms": [
+      "feel",
+      "felt",
+      "felt"
+     ]
+    },
+    {
+     "id": "basis-lesen-unregelmaessige-verben--to-put",
+     "en": "to put",
+     "de": "legen, stellen",
+     "sEn": "Put the milk in the fridge.",
+     "sDe": "Stell die Milch in den Kühlschrank.",
+     "forms": [
+      "put",
+      "put",
+      "put"
+     ]
+    },
+    {
+     "id": "basis-lesen-unregelmaessige-verben--to-bring",
+     "en": "to bring",
+     "de": "(mit)bringen",
+     "sEn": "Please bring your book tomorrow.",
+     "sDe": "Bitte bring morgen dein Buch mit.",
+     "forms": [
+      "bring",
+      "brought",
+      "brought"
+     ]
+    },
+    {
+     "id": "basis-lesen-unregelmaessige-verben--to-draw",
+     "en": "to draw",
+     "de": "zeichnen, malen",
+     "sEn": "Can you draw a cat?",
+     "sDe": "Kannst du eine Katze malen?",
+     "forms": [
+      "draw",
+      "drew",
+      "drawn"
+     ]
+    },
+    {
+     "id": "basis-lesen-unregelmaessige-verben--to-understand",
+     "en": "to understand",
+     "de": "verstehen",
+     "sEn": "I don't understand the question.",
+     "sDe": "Ich verstehe die Frage nicht.",
+     "forms": [
+      "understand",
+      "understood",
+      "understood"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "basis-schreiben-verbindungswoerter",
+   "name": "Basis – Schreiben: Verbindungswörter",
+   "words": [
+    {
+     "id": "basis-schreiben-verbindungswoerter--but",
+     "en": "but",
+     "de": "aber",
+     "sEn": "I like cats, but I don't like dogs.",
+     "sDe": "Ich mag Katzen, aber ich mag keine Hunde."
+    },
+    {
+     "id": "basis-schreiben-verbindungswoerter--or",
+     "en": "or",
+     "de": "oder",
+     "sEn": "Do you want an apple or a banana?",
+     "sDe": "Möchtest du einen Apfel oder eine Banane?"
+    },
+    {
+     "id": "basis-schreiben-verbindungswoerter--because",
+     "en": "because",
+     "de": "weil",
+     "sEn": "I'm happy because it's my birthday.",
+     "sDe": "Ich bin froh, weil ich Geburtstag habe."
+    },
+    {
+     "id": "basis-schreiben-verbindungswoerter--so",
+     "en": "so",
+     "de": "also, deshalb",
+     "sEn": "It was cold, so I wore my jacket.",
+     "sDe": "Es war kalt, deshalb habe ich meine Jacke angezogen."
+    },
+    {
+     "id": "basis-schreiben-verbindungswoerter--when",
+     "en": "when",
+     "de": "als, wenn",
+     "sEn": "When I was little, I had a hamster.",
+     "sDe": "Als ich klein war, hatte ich einen Hamster."
+    },
+    {
+     "id": "basis-schreiben-verbindungswoerter--if",
+     "en": "if",
+     "de": "wenn, falls",
+     "sEn": "If it's sunny, we can go to the beach.",
+     "sDe": "Wenn es sonnig ist, können wir an den Strand gehen."
+    },
+    {
+     "id": "basis-schreiben-verbindungswoerter--before",
+     "en": "before",
+     "de": "bevor",
+     "sEn": "Wash your hands before you eat.",
+     "sDe": "Wasch dir die Hände, bevor du isst."
+    },
+    {
+     "id": "basis-schreiben-verbindungswoerter--after",
+     "en": "after",
+     "de": "nachdem",
+     "sEn": "After I did my homework, I played outside.",
+     "sDe": "Nachdem ich meine Hausaufgaben gemacht hatte, habe ich draußen gespielt."
+    },
+    {
+     "id": "basis-schreiben-verbindungswoerter--also",
+     "en": "also",
+     "de": "auch (im Satz)",
+     "sEn": "I also like horses.",
+     "sDe": "Ich mag auch Pferde."
+    },
+    {
+     "id": "basis-schreiben-verbindungswoerter--too",
+     "en": "too",
+     "de": "auch (am Satzende)",
+     "sEn": "My sister likes pizza too.",
+     "sDe": "Meine Schwester mag auch Pizza."
+    },
+    {
+     "id": "basis-schreiben-verbindungswoerter--for-example",
+     "en": "for example",
+     "de": "zum Beispiel",
+     "sEn": "I like sports, for example tennis and swimming.",
+     "sDe": "Ich mag Sport, zum Beispiel Tennis und Schwimmen."
+    },
+    {
+     "id": "basis-schreiben-verbindungswoerter--that",
+     "en": "that",
+     "de": "dass",
+     "sEn": "I know that you like chocolate.",
+     "sDe": "Ich weiß, dass du Schokolade magst."
+    },
+    {
+     "id": "basis-schreiben-verbindungswoerter--who",
+     "en": "who",
+     "de": "der, die, das (bei Personen)",
+     "sEn": "I have a friend who has got a pony.",
+     "sDe": "Ich habe eine Freundin, die ein Pony hat."
+    }
+   ]
+  },
+  {
+   "id": "basis-schreiben-reihenfolge",
+   "name": "Basis – Schreiben: Reihenfolge",
+   "words": [
+    {
+     "id": "basis-schreiben-reihenfolge--first",
+     "en": "first",
+     "de": "zuerst",
+     "sEn": "First we went to the zoo.",
+     "sDe": "Zuerst sind wir in den Zoo gegangen."
+    },
+    {
+     "id": "basis-schreiben-reihenfolge--then",
+     "en": "then",
+     "de": "dann",
+     "sEn": "Then we had lunch.",
+     "sDe": "Dann haben wir zu Mittag gegessen."
+    },
+    {
+     "id": "basis-schreiben-reihenfolge--after-that",
+     "en": "after that",
+     "de": "danach",
+     "sEn": "After that we went home.",
+     "sDe": "Danach sind wir nach Hause gefahren."
+    },
+    {
+     "id": "basis-schreiben-reihenfolge--next",
+     "en": "next",
+     "de": "als Nächstes",
+     "sEn": "Next we saw the lions.",
+     "sDe": "Als Nächstes haben wir die Löwen gesehen."
+    },
+    {
+     "id": "basis-schreiben-reihenfolge--suddenly",
+     "en": "suddenly",
+     "de": "plötzlich",
+     "sEn": "Suddenly it started to rain.",
+     "sDe": "Plötzlich hat es angefangen zu regnen."
+    },
+    {
+     "id": "basis-schreiben-reihenfolge--in-the-end",
+     "en": "in the end",
+     "de": "am Ende",
+     "sEn": "In the end we were very tired.",
+     "sDe": "Am Ende waren wir sehr müde."
+    },
+    {
+     "id": "basis-schreiben-reihenfolge--finally",
+     "en": "finally",
+     "de": "schließlich, endlich",
+     "sEn": "Finally we were at home.",
+     "sDe": "Endlich waren wir zu Hause."
+    },
+    {
+     "id": "basis-schreiben-reihenfolge--one-day",
+     "en": "one day",
+     "de": "eines Tages",
+     "sEn": "One day a little dog came to our house.",
+     "sDe": "Eines Tages kam ein kleiner Hund zu unserem Haus."
+    },
+    {
+     "id": "basis-schreiben-reihenfolge--luckily",
+     "en": "luckily",
+     "de": "zum Glück",
+     "sEn": "Luckily I found my key.",
+     "sDe": "Zum Glück habe ich meinen Schlüssel gefunden."
+    },
+    {
+     "id": "basis-schreiben-reihenfolge--unfortunately",
+     "en": "unfortunately",
+     "de": "leider",
+     "sEn": "Unfortunately my team lost.",
+     "sDe": "Leider hat meine Mannschaft verloren."
+    }
+   ]
+  },
+  {
+   "id": "basis-schreiben-satzbausteine",
+   "name": "Basis – Schreiben: Satzbausteine",
+   "words": [
+    {
+     "id": "basis-schreiben-satzbausteine--i-think",
+     "en": "I think",
+     "de": "ich finde, ich glaube",
+     "sEn": "I think the film is great.",
+     "sDe": "Ich finde den Film toll."
+    },
+    {
+     "id": "basis-schreiben-satzbausteine--i-like",
+     "en": "I like",
+     "de": "ich mag",
+     "sEn": "I like reading in bed.",
+     "sDe": "Ich lese gern im Bett."
+    },
+    {
+     "id": "basis-schreiben-satzbausteine--i-don-t-like",
+     "en": "I don't like",
+     "de": "ich mag nicht",
+     "sEn": "I don't like spiders.",
+     "sDe": "Ich mag keine Spinnen."
+    },
+    {
+     "id": "basis-schreiben-satzbausteine--i-love",
+     "en": "I love",
+     "de": "ich liebe",
+     "sEn": "I love my grandma's cake.",
+     "sDe": "Ich liebe den Kuchen meiner Oma."
+    },
+    {
+     "id": "basis-schreiben-satzbausteine--i-d-like",
+     "en": "I'd like",
+     "de": "ich hätte gern, ich möchte",
+     "sEn": "I'd like a hot chocolate, please.",
+     "sDe": "Ich hätte gern einen Kakao, bitte."
+    },
+    {
+     "id": "basis-schreiben-satzbausteine--my-favourite",
+     "en": "my favourite",
+     "de": "mein(e) Lieblings-",
+     "sEn": "My favourite animal is the horse.",
+     "sDe": "Mein Lieblingstier ist das Pferd."
+    },
+    {
+     "id": "basis-schreiben-satzbausteine--i-m-good-at",
+     "en": "I'm good at",
+     "de": "ich bin gut in",
+     "sEn": "I'm good at drawing.",
+     "sDe": "Ich kann gut zeichnen."
+    },
+    {
+     "id": "basis-schreiben-satzbausteine--there-is",
+     "en": "there is",
+     "de": "es gibt (Einzahl)",
+     "sEn": "There is a cinema in our town.",
+     "sDe": "In unserer Stadt gibt es ein Kino."
+    },
+    {
+     "id": "basis-schreiben-satzbausteine--there-are",
+     "en": "there are",
+     "de": "es gibt (Mehrzahl)",
+     "sEn": "There are three bedrooms in our house.",
+     "sDe": "In unserem Haus gibt es drei Schlafzimmer."
+    },
+    {
+     "id": "basis-schreiben-satzbausteine--i-ve-got",
+     "en": "I've got",
+     "de": "ich habe",
+     "sEn": "I've got two brothers.",
+     "sDe": "Ich habe zwei Brüder."
+    },
+    {
+     "id": "basis-schreiben-satzbausteine--bigger-than",
+     "en": "bigger than",
+     "de": "größer als",
+     "sEn": "My dog is bigger than your cat.",
+     "sDe": "Mein Hund ist größer als deine Katze."
+    },
+    {
+     "id": "basis-schreiben-satzbausteine--the-best",
+     "en": "the best",
+     "de": "der, die, das beste",
+     "sEn": "You are the best friend in the world!",
+     "sDe": "Du bist die beste Freundin der Welt!"
+    },
+    {
+     "id": "basis-schreiben-satzbausteine--i-can",
+     "en": "I can",
+     "de": "ich kann",
+     "sEn": "I can play the piano.",
+     "sDe": "Ich kann Klavier spielen."
+    },
+    {
+     "id": "basis-schreiben-satzbausteine--i-can-t",
+     "en": "I can't",
+     "de": "ich kann nicht",
+     "sEn": "I can't swim very well.",
+     "sDe": "Ich kann nicht sehr gut schwimmen."
+    },
+    {
+     "id": "basis-schreiben-satzbausteine--i-have-to",
+     "en": "I have to",
+     "de": "ich muss",
+     "sEn": "I have to feed my rabbit.",
+     "sDe": "Ich muss mein Kaninchen füttern."
+    },
+    {
+     "id": "basis-schreiben-satzbausteine--can-i",
+     "en": "can I",
+     "de": "darf ich",
+     "sEn": "Can I go to the toilet, please?",
+     "sDe": "Darf ich bitte auf die Toilette gehen?"
+    },
+    {
+     "id": "basis-schreiben-satzbausteine--let-s",
+     "en": "let's",
+     "de": "lass uns",
+     "sEn": "Let's play a game!",
+     "sDe": "Lass uns ein Spiel spielen!"
+    },
+    {
+     "id": "basis-schreiben-satzbausteine--what-about",
+     "en": "what about",
+     "de": "wie wäre es mit",
+     "sEn": "What about pizza tonight?",
+     "sDe": "Wie wäre es heute Abend mit Pizza?"
+    },
+    {
+     "id": "basis-schreiben-satzbausteine--it-was-fun",
+     "en": "it was fun",
+     "de": "es hat Spaß gemacht",
+     "sEn": "The trip was great. It was fun!",
+     "sDe": "Der Ausflug war toll. Es hat Spaß gemacht!"
+    }
+   ]
+  },
+  {
+   "id": "basis-schreiben-e-mail-und-brief",
+   "name": "Basis – Schreiben: E-Mail und Brief",
+   "words": [
+    {
+     "id": "basis-schreiben-e-mail-und-brief--dear",
+     "en": "Dear",
+     "de": "Liebe(r) (Anrede im Brief)",
+     "sEn": "Dear Emma, thank you for your letter.",
+     "sDe": "Liebe Emma, danke für deinen Brief."
+    },
+    {
+     "id": "basis-schreiben-e-mail-und-brief--hi",
+     "en": "Hi",
+     "de": "Hallo",
+     "sEn": "Hi Tom, it's me again!",
+     "sDe": "Hallo Tom, ich bin's wieder!"
+    },
+    {
+     "id": "basis-schreiben-e-mail-und-brief--how-are-you",
+     "en": "How are you?",
+     "de": "Wie geht es dir?",
+     "sEn": "Hi Lucy, how are you? I'm fine.",
+     "sDe": "Hallo Lucy, wie geht es dir? Mir geht es gut."
+    },
+    {
+     "id": "basis-schreiben-e-mail-und-brief--thanks-for-your-email",
+     "en": "thanks for your email",
+     "de": "danke für deine E-Mail",
+     "sEn": "Thanks for your email and the funny photo.",
+     "sDe": "Danke für deine E-Mail und das lustige Foto."
+    },
+    {
+     "id": "basis-schreiben-e-mail-und-brief--guess-what",
+     "en": "guess what",
+     "de": "stell dir vor, rate mal",
+     "sEn": "Guess what! I've got a new bike!",
+     "sDe": "Stell dir vor! Ich habe ein neues Fahrrad!"
+    },
+    {
+     "id": "basis-schreiben-e-mail-und-brief--by-the-way",
+     "en": "by the way",
+     "de": "übrigens",
+     "sEn": "By the way, my dog says hello.",
+     "sDe": "Übrigens, mein Hund sagt Hallo."
+    },
+    {
+     "id": "basis-schreiben-e-mail-und-brief--write-soon",
+     "en": "write soon",
+     "de": "schreib bald",
+     "sEn": "That's all for today. Write soon!",
+     "sDe": "Das war's für heute. Schreib bald!"
+    },
+    {
+     "id": "basis-schreiben-e-mail-und-brief--see-you-soon",
+     "en": "see you soon",
+     "de": "bis bald",
+     "sEn": "See you soon in the holidays!",
+     "sDe": "Bis bald in den Ferien!"
+    },
+    {
+     "id": "basis-schreiben-e-mail-und-brief--best-wishes",
+     "en": "best wishes",
+     "de": "viele Grüße",
+     "sEn": "Best wishes, your friend Paula",
+     "sDe": "Viele Grüße, deine Freundin Paula"
+    },
+    {
+     "id": "basis-schreiben-e-mail-und-brief--love",
+     "en": "love",
+     "de": "alles Liebe (Briefschluss)",
+     "sEn": "See you on Saturday! Love, Paula",
+     "sDe": "Bis Samstag! Alles Liebe, Paula"
+    }
+   ]
+  },
+  {
    "id": "lighthouse-1-s-212-213",
    "name": "Lighthouse 1 – S. 212–213",
    "words": [

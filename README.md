@@ -70,6 +70,14 @@ Am Kinder-iPad: **Eltern → PIN → Überblick**
 
 ---
 
+## Grundwortschatz
+
+`lektionen/basis.txt` enthält 159 Wörter und Wendungen, die für Jahrgang 6 sicher sitzen sollten, unabhängig vom Buch. Die Lektionen heißen „Basis – Lesen: …“ bzw. „Basis – Schreiben: …“.
+- **Lesen:** Fragewörter, Präpositionen, Mengen und Verneinung, Signalwörter (Present, Past, Zukunft), 42 unregelmäßige Verben
+- **Schreiben:** Verbindungswörter, Wörter für die Reihenfolge, Satzbausteine (Meinung, Beschreibung, Vergleiche), E-Mail und Brief
+
+Sie laufen nebenbei mit: Pro Tag kommen bis zu 2 neue Basiswörter in die Runde, zusätzlich zu den neuen Buchwörtern (Konstante `BASIS_NEW` in `src/app.html`). Die Wörter kommen abwechselnd aus den Gruppen. Auf der Startseite und im Eltern-Überblick gibt es einen eigenen Block „Grundwortschatz“. Erkannt werden Basis-Lektionen an der ID, die mit `basis-` beginnt (also am Namen „Basis – …“). Lektionsnamen nicht umbenennen, sonst geht der Lernstand verloren.
+
 ## Technik (für Claude / Updates)
 
 ```

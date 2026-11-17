@@ -232,6 +232,14 @@ const unlocked = (w,mid)=>MODE[mid].group==="leicht"||LIGHT.some(x=>P(w.id,x).bo
 const wordModes = w=>MODES.filter(m=>available(w,m.id));
 const secure = w=>{const ms=wordModes(w);return ms.length>0&&ms.every(m=>P(w.id,m.id).box>=4)};
 const started = w=>MODES.some(m=>P(w.id,m.id).box>0);
+/* Grundwortschatz: Lektionen "Basis – …" (IDs beginnen mit basis-) laufen nebenbei mit */
+const BASIS_NEW = 2;
+const isBasis = id=>/^basis-/.test(String(id||""));
+const basisLabel = name=>String(name).replace(/^Basis\s*[–-]\s*/,"");
+function basisStartedToday(){
+  const first={}; for(const e of S.log){if(!(e.w in first))first[e.w]=dayNum(e.t)}
+  const t=today(); return S.words.filter(w=>isBasis(w.lesson)&&first[w.id]===t).length;
+}
 
 function grade(wid,mid,ok,free){
   const p=Object.assign({},P(wid,mid)); const before=p.box;
@@ -258,25 +266,29 @@ function spread(items){
   return out;
 }
 function buildDaily(){
-  const t=today(),rev=[],neu=new Map();
+  const t=today(),rev=[],neu=new Map(),rank={},cnt={};
+  S.words.forEach(w=>{if(isBasis(w.lesson)){cnt[w.lesson]=(cnt[w.lesson]||0)+1;rank[w.id]=cnt[w.lesson]}});
   for(const w of S.words){
     const isNew=!started(w);
     for(const m of MODES){
       if(!available(w,m.id)||!unlocked(w,m.id)) continue;
       const p=P(w.id,m.id);
       if(p.box>0&&p.due<=t) rev.push({w:w.id,m:m.id,box:p.box,due:p.due});
-      else if(p.box===0){if(!neu.has(w.id))neu.set(w.id,{isNew,items:[]});neu.get(w.id).items.push({w:w.id,m:m.id,box:0,isNew})}
+      else if(p.box===0){if(!neu.has(w.id))neu.set(w.id,{isNew,basis:isBasis(w.lesson),rank:rank[w.id]||0,items:[]});neu.get(w.id).items.push({w:w.id,m:m.id,box:0,isNew})}
     }
   }
   rev.sort((a,b)=>a.due-b.due||a.box-b.box);
   let items=rev.slice(0,S.perDay);
   const space=S.perDay-items.length;
+  const groups=[...neu.values()];
   if(space>0){
-    const groups=[...neu.values()];
     const partial=groups.filter(g=>!g.isNew).flatMap(g=>g.items);
-    const fresh=groups.filter(g=>g.isNew).slice(0,5).flatMap(g=>g.items);
+    const fresh=groups.filter(g=>g.isNew&&!g.basis).slice(0,5).flatMap(g=>g.items);
     items=items.concat(partial.concat(fresh).slice(0,space));
   }
+  // zusätzlich bis zu 2 neue Grundwortschatz-Wörter pro Tag, abwechselnd aus den Gruppen
+  const quota=Math.max(0,BASIS_NEW-basisStartedToday());
+  if(quota) items=items.concat(groups.filter(g=>g.isNew&&g.basis).sort((a,b)=>a.rank-b.rank).slice(0,quota).flatMap(g=>g.items));
   return spread(shuffle(items));
 }
 function buildPractice(){
@@ -425,7 +437,7 @@ function stats(){
 /* ---------- views ---------- */
 function vHome(){
   const due=buildDaily().length, st=streak(), empty=!S.words.length;
-  const lessons=S.lessons.map(l=>{const ws=S.words.filter(w=>w.lesson===l.id);return {l,ws}}).filter(x=>x.ws.length);
+  const lessons=S.lessons.filter(l=>!isBasis(l.id)).map(l=>{const ws=S.words.filter(w=>w.lesson===l.id);return {l,ws}}).filter(x=>x.ws.length);
   return `
   <header class="top"><div class="brand"><i>EN</i>Wortkasten</div><button class="btn ghost" data-act="go-lock">Eltern</button></header>
   ${newsCard()}
@@ -443,11 +455,30 @@ function vHome(){
   </div>
   <section class="card">
     <h2>Lektionen</h2>
-    ${lessons.length?lessons.map(({l,ws})=>{
-      const sec=ws.filter(secure).length, st=ws.filter(w=>started(w)&&!secure(w)).length, n=ws.length;
-      return `<div class="lesson"><b>${esc(l.name)}</b><span class="muted small tnum">${sec} von ${n} sicher</span>
-      <div class="bar" title="sicher / angefangen / neu"><i style="width:${100*sec/n}%;background:var(--b5)"></i><i style="width:${100*st/n}%;background:var(--b3)"></i></div></div>`}).join(""):`<p class="muted">Noch keine Vokabeln. Im Eltern-Bereich oder unter „Meine Wörter“ kommen welche dazu.</p>`}
-    <div class="legend"><span><i style="background:var(--b5)"></i>sicher</span><span><i style="background:var(--b3)"></i>angefangen</span><span><i style="background:var(--b0)"></i>neu</span></div>
+    ${lessons.length?lessons.map(({l,ws})=>lessonRow(l.name,ws)).join(""):`<p class="muted">Noch keine Vokabeln. Im Eltern-Bereich oder unter „Meine Wörter“ kommen welche dazu.</p>`}
+    ${LEGEND}
+  </section>
+  ${basisCard()}`;
+}
+const LEGEND=`<div class="legend"><span><i style="background:var(--b5)"></i>sicher</span><span><i style="background:var(--b3)"></i>angefangen</span><span><i style="background:var(--b0)"></i>neu</span></div>`;
+function lessonRow(name,ws){
+  const sec=ws.filter(secure).length, st=ws.filter(w=>started(w)&&!secure(w)).length, n=ws.length;
+  return `<div class="lesson"><b>${esc(name)}</b><span class="muted small tnum">${sec} von ${n} sicher</span>
+  <div class="bar" title="sicher / angefangen / neu"><i style="width:${100*sec/n}%;background:var(--b5)"></i><i style="width:${100*st/n}%;background:var(--b3)"></i></div></div>`;
+}
+function basisCard(parent){
+  const ls=S.lessons.filter(l=>isBasis(l.id)).map(l=>({l,ws:S.words.filter(w=>w.lesson===l.id)})).filter(x=>x.ws.length);
+  if(!ls.length) return "";
+  const all=ls.flatMap(x=>x.ws), sec=all.filter(secure).length, open=all.filter(w=>!started(w)).length;
+  const parts=[];
+  ls.forEach(({l,ws})=>{const lab=basisLabel(l.name), m=lab.match(/^([^:]+):\s*(.+)$/);
+    const sec=m?m[1].trim():"", name=m?m[2]:lab;
+    let p=parts.find(x=>x.sec===sec); if(!p){p={sec,rows:[]};parts.push(p)} p.rows.push(lessonRow(name,ws))});
+  return `<section class="card">
+    <div class="row" style="justify-content:space-between"><h${parent?3:2}>Grundwortschatz</h${parent?3:2}><span class="muted small tnum">${sec} von ${all.length} sicher</span></div>
+    <p class="small muted">${parent?`Wichtige Wörter zum Lesen und Schreiben. Pro Tag kommen bis zu ${BASIS_NEW} neue dazu, zusätzlich zu den Buch-Lektionen. Noch nicht angefangen: ${open}.`:`Die wichtigsten Wörter zum Lesen und Schreiben. Jeden Tag kommen ${BASIS_NEW} neue in deine Runde.`}</p>
+    ${parts.map(p=>`${p.sec?`<div class="eyebrow">${esc(p.sec)}</div>`:""}${p.rows.join("")}`).join("")}
+    ${LEGEND}
   </section>`;
 }
 
@@ -482,7 +513,7 @@ async function syncLessons(){
       if(!ex){S.words.push(Object.assign({id:w.id,lesson:L.id,src:"buch",created:Date.now()},f));added++;changed=true}
       else if(ex.src==="buch"&&!ex.edited&&JSON.stringify(K.map(k=>ex[k]??null))!==JSON.stringify(K.map(k=>f[k]??null))){Object.assign(ex,f);if(!f.forms)delete ex.forms;changed=true}
     }
-    if(added) news.push({name:les.name,n:added});
+    if(added){const nm=isBasis(L.id)?"Grundwortschatz":les.name;const nx=news.find(x=>x.name===nm);if(nx)nx.n+=added;else news.push({name:nm,n:added})}
   }
   if(S.lessons.some(l=>l.id==="l_demo")){
     const demo=S.words.filter(w=>w.lesson==="l_demo");
@@ -714,6 +745,7 @@ function pOverview(){
     <div class="kpi"><b>${Math.round(st.time7/60000)} min</b><span>Lernzeit 7 Tage</span></div>
     <div class="kpi"><b>${streak()}</b><span>Tage in Folge</span></div>
   </div>
+  ${basisCard(true)}
   <section class="card"><h3>Lerntage (14 Tage)</h3>
     <div class="days">${st.days.map(d=>`<div class="day" title="${d.n} Antworten"><i style="${d.n?`background:var(--accent);opacity:${0.35+0.65*d.n/mx}`:""}"></i>${WD[new Date(d.d*864e5).getUTCDay()]}</div>`).join("")}</div>
     <p class="small muted">Je kräftiger, desto mehr Antworten an dem Tag.</p>
@@ -800,7 +832,7 @@ function pSettings(){
   const armedR=ui.confirm==="reset", armedB=ui.confirm==="restore";
   return `<section class="card"><h3>Lernrunde</h3>
     <label class="f">Übungen pro Tag<select class="in" data-change="perday">${[10,15,20,30,40].map(n=>`<option ${S.perDay===n?"selected":""}>${n}</option>`).join("")}</select></label>
-    <p class="small muted">Pro Runde kommen höchstens 5 ganz neue Wörter dazu.</p>
+    <p class="small muted">Pro Runde kommen höchstens 5 ganz neue Wörter aus dem Buch dazu. Zusätzlich kommen pro Tag bis zu ${BASIS_NEW} neue Wörter aus dem Grundwortschatz.</p>
   </section>
   <section class="card"><h3>PIN</h3><button class="btn" data-act="pin-change">PIN ändern</button></section>
   <section class="card"><h3>Sicherung</h3>
