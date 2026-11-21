@@ -106,7 +106,9 @@ button,select,input,textarea{font:inherit;color:inherit}
 .kpi span{font-size:13px;color:var(--muted)}
 .days{display:grid;grid-template-columns:repeat(14,1fr);gap:4px}
 .day{display:flex;flex-direction:column;align-items:center;gap:4px;font-size:11px;color:var(--muted)}
-.day i{display:block;width:100%;aspect-ratio:1;max-width:100%;border-radius:5px;background:var(--line)}
+.day .dcol{width:100%;height:90px;border-radius:5px;background:var(--surface2);border:1px solid var(--line);display:flex;align-items:flex-end;overflow:hidden}
+.day .dcol i{display:block;width:100%;background:var(--accent);border-radius:4px 4px 0 0}
+.day .dmin{font-size:12px;font-weight:700;color:var(--ink);min-height:16px}
 .mrow{display:grid;grid-template-columns:150px 1fr 54px;gap:10px;align-items:center}
 @media (max-width:460px){.mrow{grid-template-columns:1fr 54px}.mrow .bar{grid-column:1/-1;grid-row:2}}
 .mrow .name{font-weight:700;font-size:15px;min-width:0}
@@ -420,7 +422,7 @@ function stats(){
   const last7=S.log.filter(e=>dayNum(e.t)>t-7);
   const acc7=last7.length?Math.round(100*last7.filter(e=>e.ok).length/last7.length):null;
   const time7=S.sessions.filter(x=>dayNum(x.start)>t-7).reduce((a,x)=>a+(x.ms||0),0);
-  const days=[];for(let d=t-13;d<=t;d++)days.push({d,n:S.log.filter(e=>dayNum(e.t)===d).length});
+  const days=[];for(let d=t-13;d<=t;d++)days.push({d,n:S.log.filter(e=>dayNum(e.t)===d).length,ms:S.sessions.filter(x=>dayNum(x.start)===d).reduce((a,x)=>a+(x.ms||0),0)});
   const last30=S.log.filter(e=>dayNum(e.t)>t-30);
   const modes=MODES.map(m=>{
     const cnt=[0,0,0,0,0,0];let locked=0,tot=0;
@@ -736,7 +738,7 @@ function vParent(){
   ${body}`;
 }
 function pOverview(){
-  const st=stats(), mx=Math.max(1,...st.days.map(d=>d.n));
+  const st=stats(), mx=Math.max(60000,...st.days.map(d=>d.ms));
   const kids=S.words.filter(w=>w.src==="kind");
   return `
   <div class="kpis">
@@ -746,9 +748,9 @@ function pOverview(){
     <div class="kpi"><b>${streak()}</b><span>Tage in Folge</span></div>
   </div>
   ${basisCard(true)}
-  <section class="card"><h3>Lerntage (14 Tage)</h3>
-    <div class="days">${st.days.map(d=>`<div class="day" title="${d.n} Antworten"><i style="${d.n?`background:var(--accent);opacity:${0.35+0.65*d.n/mx}`:""}"></i>${WD[new Date(d.d*864e5).getUTCDay()]}</div>`).join("")}</div>
-    <p class="small muted">Je kräftiger, desto mehr Antworten an dem Tag.</p>
+  <section class="card"><h3>Lernzeit pro Tag (14 Tage)</h3>
+    <div class="days">${st.days.map(d=>{const m=d.ms/60000;return `<div class="day" title="${d.n} Antworten"><span class="dmin tnum">${d.ms?(m<1?"<1":Math.round(m)):(d.n?"<1":"")}</span><div class="dcol"><i style="height:${d.ms?Math.max(8,100*d.ms/mx):d.n?8:0}%"></i></div>${WD[new Date(d.d*864e5).getUTCDay()]}</div>`}).join("")}</div>
+    <p class="small muted">Zahl über dem Balken = Minuten an dem Tag.</p>
   </section>
   <section class="card"><h3>Stand pro Lernmodus</h3>
     <p class="small muted">Anzahl Wörter je Fach. Die Prozentzahl ist die Trefferquote der letzten 30 Tage.</p>
